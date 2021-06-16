@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libraryfxfinal.AdminController">
+   <children>
+      <StackPane fx:id="rootPane" prefHeight="713.0" prefWidth="1176.0">
+         <children>
+            <VBox prefHeight="713.0" prefWidth="1176.0">
+               <children>
+                  <AnchorPane prefHeight="13.0" prefWidth="1000.0" style="-fx-background-color: #eee;">
+                     <children>
+                        <HBox alignment="TOP_RIGHT" layoutX="911.0" layoutY="-36.0" prefHeight="28.0" prefWidth="86.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="911.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fx:id="minimize" fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@408-4088745_red-close-icon-png.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fx:id="exit" fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icon-close-13.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="4.0" right="4.0" top="4.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="23.0" prefWidth="1176.0" />
+                  <AnchorPane prefHeight="720.0" prefWidth="1176.0">
+                     <children>
+                        <HBox layoutX="220.0" layoutY="296.0" prefHeight="692.0" prefWidth="1176.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="692.0" prefWidth="382.0" spacing="20.0">
+                                 <children>
+                                    <Label fx:id="adminName" prefHeight="25.0" prefWidth="233.0" text="Ονομα υπαλληλου: " wrapText="true">
+                                       <font>
+                                          <Font name="Liberation Sans" size="17.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <JFXTextField fx:id="title" promptText="Τίτλος βιβλίου">
+                                       <VBox.margin>
+                                          <Insets top="20.0" />
+                                       </VBox.margin>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="rating" promptText="Βαθμολογία" />
+                                    <JFXDatePicker fx:id="dateOfRelease" prefHeight="25.0" prefWidth="308.0" promptText="Ημ/νια Κυκλοφορίας" />
+                                    <JFXTextField fx:id="quantity" layoutX="10.0" layoutY="77.0" promptText="Απόθεμα" />
+                                    <JFXTextField fx:id="publisher" promptText="Εκδότης" />
+                                    <JFXTextField fx:id="monthlyFee" layoutX="10.0" layoutY="102.0" promptText="Κόστος Ενοικίασης" />
+                                    <JFXTextField fx:id="author" layoutX="40.0" layoutY="255.0" promptText="Συγγραφέας" />
+                                    <JFXTextField fx:id="pages" layoutX="10.0" layoutY="127.0" promptText="Αριθμός Σελιδών" />
+                                    <JFXTextArea fx:id="preview" prefHeight="77.0" prefWidth="309.0" promptText="Περιγραφή" />
+                                    <JFXButton buttonType="RAISED" onAction="#showCategoryDialog" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #ddd;" text="Επιλογή Κατηγορίας">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" layoutX="119.0" layoutY="442.0" onAction="#chooseImage" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #ddd;" text="Επιλογή Εικόνας">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                    <JFXButton buttonType="RAISED" layoutX="119.0" layoutY="487.0" onAction="#registerBook" prefHeight="25.0" prefWidth="163.0" style="-fx-background-color: #ddd;" text="Αποθήκευση Βιβλίου">
+                                       <VBox.margin>
+                                          <Insets top="10.0" />
+                                       </VBox.margin>
+                                    </JFXButton>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                                 <padding>
+                                    <Insets left="30.0" right="30.0" />
+                                 </padding>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="692.0" prefWidth="406.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Διαγραφή Βιβλίου" />
+                                    <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                                       <children>
+                                          <JFXComboBox fx:id="deleteMovieCombobox" prefHeight="25.0" prefWidth="187.0" />
+                                          <JFXButton onAction="#deleteMovie" text="Διαγραφή" />
+                                       </children>
+                                    </HBox>
+                                    <Label text="Επιστροφή βιβλίου" />
+                                    <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                                       <children>
+                                          <JFXComboBox fx:id="returnBook" prefHeight="25.0" prefWidth="188.0" />
+                                          <JFXButton onAction="#returnBookButton" prefHeight="25.0" prefWidth="87.0" text="Επιβεβαίωση" />
+                                       </children>
+                                    </HBox>
+                                    <Label text="Username νεου υπαλληλου" />
+                                    <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                                       <children>
+                                          <JFXTextField fx:id="newAdminTextfield" prefHeight="25.0" prefWidth="187.0" promptText="Username" />
+                                          <JFXButton onAction="#makeAdmin" prefHeight="25.0" prefWidth="87.0" text="Επιβεβαίωση" />
+                                       </children>
+                                    </HBox>
+                                    <Label text="Προσθήκη Αποθέματος" />
+                                    <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                       <children>
+                                          <JFXComboBox fx:id="addStockCombobox" prefHeight="25.0" prefWidth="149.0" />
+                                          <JFXTextField fx:id="changeQuantityInput" prefHeight="25.0" prefWidth="35.0" />
+                                          <JFXButton onAction="#changeQuantity" prefHeight="25.0" prefWidth="87.0" text="Προσθήκη" />
+                                       </children>
+                                    </HBox>
+                                    <JFXButton buttonType="RAISED" onAction="#logout" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #ddd;" text="Αποσύνδεση" />
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="692.0" prefWidth="427.0">
+                                 <children>
+                                    <Label text="Αρχεία Καταγραφής">
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" />
+                                       </VBox.margin></Label>
+                                    <HBox prefHeight="154.0" prefWidth="414.0">
+                                       <children>
+                                          <VBox alignment="CENTER" prefHeight="649.0" prefWidth="221.0" spacing="15.0">
+                                             <children>
+                                                <JFXButton buttonType="RAISED" onAction="#showChangeAddressLog" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #ddd;" text="Αλλαγές διευθύνσεων" />
+                                                <JFXButton buttonType="RAISED" layoutX="56.0" layoutY="75.0" onAction="#showEmailLog" prefHeight="25.0" prefWidth="147.0" style="-fx-background-color: #ddd;" text="Αλλαγές Email" />
+                                                <JFXButton buttonType="RAISED" layoutX="56.0" layoutY="95.0" onAction="#showPhoneLog" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #ddd;" text="Αλλαγές τηλεφώνων" />
+                                                <JFXButton buttonType="RAISED" onAction="#showAdminLoginLogs" prefHeight="25.0" prefWidth="152.0" style="-fx-background-color: #ddd;" text="Logins υπαλλήλων" />
+                                             </children>
+                                          </VBox>
+                                          <VBox alignment="CENTER" prefHeight="691.0" prefWidth="194.0" spacing="15.0">
+                                             <children>
+                                                <JFXButton buttonType="RAISED" onAction="#showLoginLog" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #ddd;" text="Αρχείο login" />
+                                                <JFXButton buttonType="RAISED" layoutX="42.0" layoutY="75.0" onAction="#showSignUpLog" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #ddd;" text="Αρχείο εγγραφών" />
+                                                <JFXButton buttonType="RAISED" layoutX="42.0" layoutY="95.0" onAction="#showBookLog" prefHeight="25.0" prefWidth="130.0" style="-fx-background-color: #ddd;" text="Αρχείο βιβλίων" />
+                                                <JFXButton buttonType="RAISED" onAction="#showAdminSignUpLogs" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #ddd;" text="Εγγραφές υπαλλήλων" />
+                                                <JFXButton buttonType="RAISED" onAction="#showAdminLogoutLogs" prefHeight="25.0" prefWidth="141.0" style="-fx-background-color: #ddd;" text="Logouts υπαλλήλων" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

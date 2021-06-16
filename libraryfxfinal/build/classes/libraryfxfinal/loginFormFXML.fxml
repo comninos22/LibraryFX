@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseDragged="#drag" onMousePressed="#save" prefHeight="616.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="libraryfxfinal.loginController">
+   <children>
+      <StackPane fx:id="rootpane" prefHeight="616.0" prefWidth="1000.0">
+         <children>
+            <VBox prefHeight="501.0" prefWidth="997.0">
+               <children>
+                  <AnchorPane prefHeight="13.0" prefWidth="1000.0" style="-fx-background-color: #eee;">
+                     <children>
+                        <HBox alignment="TOP_RIGHT" layoutX="911.0" layoutY="-36.0" prefHeight="28.0" prefWidth="86.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="911.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@./408-4088745_red-close-icon-png.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                              <ImageView fitHeight="30.0" fitWidth="25.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@./icon-close-13.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets bottom="4.0" right="4.0" top="4.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="590.0" prefWidth="1008.0">
+                     <children>
+                        <HBox prefHeight="475.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="475.0" prefWidth="500.0">
+                                 <children>
+                                    <ImageView fitHeight="583.0" fitWidth="500.0" layoutY="1.0">
+                                       <image>
+                                           <Image url="@./8s9fQZ.png" />
+                                          <Image url="@./Abstract_background_vector_1.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <VBox fx:id="signupArea" alignment="CENTER" layoutX="68.0" layoutY="29.0" prefHeight="527.0" prefWidth="364.0" spacing="30.0">
+                                       <children>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Δεν είστε εγγεγραμμένος χρήστης; Δημιουργήστε λογαριασμό τώρα" textAlignment="CENTER" wrappingWidth="363.13671875">
+                                             <font>
+                                                <Font name="Liberation Sans" size="19.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="40.0" />
+                                             </VBox.margin>
+                                          </Text>
+                                          <JFXButton buttonType="RAISED" onAction="#signupAction" prefHeight="25.0" prefWidth="163.0" ripplerFill="#1ad0d7" style="-fx-background-color: #ddd;" text="ΕΓΓΡΑΦΗ" underline="true">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane prefHeight="475.0" prefWidth="500.0" style="-fx-background-color: #fbf7f0;">
+                                 <children>
+                                    <ImageView fitHeight="583.0" fitWidth="500.0" layoutY="1.0" nodeOrientation="RIGHT_TO_LEFT">
+                                       <image>
+                                          <Image url="@./Abstract_background_vector_1.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <AnchorPane layoutX="80.0" layoutY="113.0" prefHeight="361.0" prefWidth="348.0">
+                                       <children>
+                                          <VBox layoutX="102.0" layoutY="67.0" prefHeight="361.0" prefWidth="348.0" spacing="40.0" style="-fx-background-color: #d9e4dd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <children>
+                                                <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Είσοδος" textAlignment="CENTER" wrappingWidth="248.13671875">
+                                                   <VBox.margin>
+                                                      <Insets top="30.0" />
+                                                   </VBox.margin>
+                                                   <font>
+                                                      <Font name="Liberation Sans Bold" size="28.0" />
+                                                   </font>
+                                                </Text>
+                                                <JFXTextField fx:id="username" focusColor="#19d3da" promptText="Όνομα χρήστη" />
+                                                <JFXPasswordField fx:id="password" focusColor="#19d3da" promptText="Κωδικός" />
+                                                <JFXCheckBox alignment="TOP_LEFT" checkedColor="#19d3da" prefHeight="18.0" prefWidth="174.0" text="Να παραμείνω συνδεμένος" textAlignment="JUSTIFY">
+                                                   <VBox.margin>
+                                                      <Insets left="75.0" />
+                                                   </VBox.margin>
+                                                </JFXCheckBox>
+                                                <JFXButton buttonType="RAISED" defaultButton="true" onAction="#loginAction" prefWidth="260.0" style="-fx-background-color: #dbd7cb;" text="ΕΙΣΟΔΟΣ" underline="true">
+                                                   <ripplerFill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop color="#66966a" />
+                                                            <Stop color="#25f0ff" offset="1.0" />
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </ripplerFill>
+                                                </JFXButton>
+                                             </children>
+                                             <padding>
+                                                <Insets left="50.0" right="50.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>
